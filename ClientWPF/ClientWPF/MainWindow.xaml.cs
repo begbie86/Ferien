@@ -13,8 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//Zusätzliche Namespaces
+using System.ServiceModel;
+using System.ServiceModel.Description;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Discovery;
+
 namespace ClientWPF
 {
+
+    [ServiceContract]
+    public interface IFlug
+    {
+        [OperationContract]
+        string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt);
+    }
+
+    [ServiceContract]
+    public interface IHotel
+    {
+        [OperationContract]
+        string getHotel(DateTime tDate, string tDestination);
+    }
+
+
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
@@ -23,6 +45,64 @@ namespace ClientWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            Control.ClientController CC = new Control.ClientController();
+        }
+
+        private void button_Suche_Click(object sender, RoutedEventArgs e)
+        {
+            Control.ClientController CC = new Control.ClientController();
+
+            if (string.IsNullOrWhiteSpace(tb_Von.Text) && string.IsNullOrWhiteSpace(tb_Nach.Text))
+            {
+                MessageBox.Show("Bitte Zielort eingeben.");
+            }
+
+            else
+            {
+                if (dp_Date.SelectedDate == null)
+                {
+                    MessageBox.Show("Bitte Datum eingeben.");
+                }
+
+                else
+                {
+                    FillFlugFields(CC.Feriensuche(dp_Date.SelectedDate.Value, tb_Von.Text, tb_Nach.Text));
+
+                }
+            }
+        }
+
+        private void FillFlugFields(string tResult)
+        {
+            if (tResult == "NULL")
+            {
+                tb_Ausgabe.Text = "Sorry, keine Resultate";
+            }
+
+            else
+            {
+                string[] res = tResult.Split(';');
+
+                tb_Gesellschaft.Text = res[0];
+                tb_Flugpreis.Text = res[1];
+            }
+        }
+
+        private void FillHotelFields(string tResult)
+        {
+            if (tResult == "NULL")
+            {
+                tb_Ausgabe.Text = "Sorry, keine Resultate";
+            }
+
+            else
+            {
+                string[] res = tResult.Split(';');
+
+                tb_Hotel.Text = res[0];
+                tb_Hotelpreis.Text = res[1];
+            }
         }
     }
 }
