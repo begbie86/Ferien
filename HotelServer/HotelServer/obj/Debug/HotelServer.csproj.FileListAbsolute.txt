@@ -7,3 +7,6 @@ C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSyst
 C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\HotelServer\HotelServer\bin\Debug\HotelServer.exe.config
 C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\HotelServer\HotelServer\obj\Debug\HotelServer.exe
 C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\HotelServer\HotelServer\obj\Debug\HotelServer.pdb
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\HotelServer\HotelServer\bin\Debug\HotelServer.exe
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\HotelServer\HotelServer\bin\Debug\HotelServer.pdb
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\HotelServer\HotelServer\obj\Debug\HotelServer.csprojResolveAssemblyReference.cache
