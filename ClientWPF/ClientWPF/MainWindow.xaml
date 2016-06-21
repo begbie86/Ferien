@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Feriensuchportal" Height="350" Width="576">
     <Grid>
-        
+        <TextBox x:Name="tb_Suche" HorizontalAlignment="Left" Height="23" Margin="88,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Zielort" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Wohin möchten Sie in die Ferien?" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Gesellschaft" HorizontalAlignment="Left" Height="23" Margin="88,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="tb_Flugpreis" HorizontalAlignment="Left" Height="23" Margin="327,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label_Copy" Content="Gesellschaft" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Flugpreis" HorizontalAlignment="Left" Margin="228,121,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_Suche" Content="Suche" HorizontalAlignment="Left" Margin="228,64,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label_Copy2" Content="Hotel" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Hotel" HorizontalAlignment="Left" Height="23" Margin="88,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="tb_Hotelpreis" HorizontalAlignment="Left" Height="23" Margin="327,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label_Copy3" Content="Hotelpreis" HorizontalAlignment="Left" Margin="228,152,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_FlugBuchung" Content="Buche" HorizontalAlignment="Left" Margin="479,125,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_HotelBuchung" Content="Buche" HorizontalAlignment="Left" Margin="479,153,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label_Copy4" Content="Ausgabe" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Ausgabe" HorizontalAlignment="Left" Height="90" Margin="88,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" IsEnabled="False"/>
+
     </Grid>
 </Window>
