@@ -1,0 +1,5 @@
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FerienClient\FerienClient\bin\Debug\FerienClient.exe.config
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FerienClient\FerienClient\bin\Debug\FerienClient.exe
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FerienClient\FerienClient\bin\Debug\FerienClient.pdb
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FerienClient\FerienClient\obj\Debug\FerienClient.exe
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FerienClient\FerienClient\obj\Debug\FerienClient.pdb
