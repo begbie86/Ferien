@@ -18,7 +18,9 @@ namespace FlugServer
     {
         public string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt)
         {
-            return "Air Berlin;250";
+            Model.Db db = Model.Db.Instance();
+
+            return db.SearchFlight(tDatetime, tStartStadt, tZielStadt);
         }
     }
 

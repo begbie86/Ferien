@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Db.cs" />
+    <Compile Include="Model\FlugBuchung.cs" />
     <Compile Include="Model\FlugItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
