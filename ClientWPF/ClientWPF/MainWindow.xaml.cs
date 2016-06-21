@@ -68,7 +68,7 @@ namespace ClientWPF
                 else
                 {
                     FillFlugFields(CC.Feriensuche(dp_Date.SelectedDate.Value, tb_Von.Text, tb_Nach.Text));
-
+                    FillHotelFields(CC.Hotelsuche(dp_Date.SelectedDate.Value, tb_Nach.Text));
                 }
             }
         }

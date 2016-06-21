@@ -22,7 +22,7 @@ namespace HotelServer
     {
         public string getHotel(DateTime tDate, string tDestination)
         {
-            return "31.08.2018,Berlin,Sheraton,650";
+            return "Sheraton;650";
         }
     }
 
