@@ -12,14 +12,13 @@ namespace FlugServer
     {
         [OperationContract]
         string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt);
-        //Test git
     }
 
     class Flug:IFlug
     {
         public string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt)
         {
-            return "31.08.2016;Bern;Berlin;250";
+            return "Air Berlin;250";
         }
     }
 
