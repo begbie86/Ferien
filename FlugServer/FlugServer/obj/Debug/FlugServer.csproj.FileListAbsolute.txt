@@ -4,3 +4,6 @@ C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSyst
 C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FlugServer\FlugServer\bin\Debug\FlugServer.pdb
 C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FlugServer\FlugServer\obj\Debug\FlugServer.exe
 C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\FerienSystem\FlugServer\FlugServer\obj\Debug\FlugServer.pdb
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\FlugServer\FlugServer\bin\Debug\FlugServer.exe.config
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\FlugServer\FlugServer\obj\Debug\FlugServer.exe
+C:\Users\simon\Google Drive\Schule\6. Semester\Paralelle Systeme\Code\GITFerien\Ferien\FlugServer\FlugServer\obj\Debug\FlugServer.pdb

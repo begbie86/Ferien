@@ -12,6 +12,7 @@ namespace FlugServer
     {
         [OperationContract]
         string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt);
+        //Test git
     }
 
     class Flug:IFlug
