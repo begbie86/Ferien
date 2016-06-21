@@ -29,11 +29,15 @@ namespace FlugServer.Model
                     instance.Flights.Add(new FlugItem { Id = 1, Preis = 40.00, StartStadt = "Bern", Zielstadt = "Berlin", Datum = new DateTime(2016,08,31), Fluggesellschaft = "Airberlin" });
                     instance.Flights.Add(new FlugItem { Id = 2, Preis = 210.00, StartStadt = "Bern", Zielstadt = "Berlin", Datum = new DateTime(2016,08,30), Fluggesellschaft = "Swiss" });
                     instance.Flights.Add(new FlugItem { Id = 3, Preis = 150.00, StartStadt = "Bern", Zielstadt = "Berlin", Datum = new DateTime(2016,08,29), Fluggesellschaft = "Kongo Air" });
+
+                    instance.Buchungen = new List<FlugBuchung>();
                 }
 
                 return instance;
         }
 
+
+        //OK nicht so schön, dafür funktionierts :)
         public string SearchFlight(DateTime tDT, string tStartStadt, string tZielStadt)
         {
             try
@@ -59,6 +63,12 @@ namespace FlugServer.Model
             res += tFlugItem.Preis.ToString();
 
             return res;
+        }
+
+        public bool bookFlight(DateTime tDateTime, string tStartStadt, string tZielstadt, double tPreis, string tFluggesellschaft)
+        {
+            Buchungen.Add(new FlugBuchung { Fluggesellschaft = tFluggesellschaft, Datum = tDateTime, Preis = tPreis, StartStadt = tStartStadt, Zielstadt = tZielstadt });
+            return true;
         }
     }
 }

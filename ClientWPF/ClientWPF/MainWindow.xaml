@@ -19,7 +19,7 @@
         <TextBox x:Name="tb_Hotel" HorizontalAlignment="Left" Height="23" Margin="88,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox x:Name="tb_Hotelpreis" HorizontalAlignment="Left" Height="23" Margin="327,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="label_Copy3" Content="Hotelpreis" HorizontalAlignment="Left" Margin="228,169,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_FlugBuchung" Content="Buche" HorizontalAlignment="Left" Margin="479,142,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_FlugBuchung" Content="Buche" HorizontalAlignment="Left" Margin="479,142,0,0" VerticalAlignment="Top" Width="75" Click="button_FlugBuchung_Click"/>
         <Button x:Name="button_HotelBuchung" Content="Buche" HorizontalAlignment="Left" Margin="479,170,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="label_Copy4" Content="Ausgabe" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_Ausgabe" HorizontalAlignment="Left" Height="90" Margin="88,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="359" IsEnabled="False"/>

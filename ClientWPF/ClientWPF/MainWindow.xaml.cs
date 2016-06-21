@@ -104,5 +104,27 @@ namespace ClientWPF
                 tb_Hotelpreis.Text = res[1];
             }
         }
+
+        private void button_FlugBuchung_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tb_Gesellschaft.Text) || string.IsNullOrWhiteSpace(tb_Flugpreis.Text))
+            {
+                MessageBox.Show("Zuerst Suchen.");
+            }
+
+            else
+            {
+                Control.ClientController CC = new Control.ClientController();
+                if(CC.FlugBuchung(dp_Date.SelectedDate.Value, tb_Von.Text, tb_Nach.Text, double.Parse(tb_Flugpreis.Text), tb_Gesellschaft.Text))
+                {
+                    tb_Ausgabe.Text = "Danke. Ihr Flug ist gebucht.";
+                }
+
+                else
+                {
+                    tb_Ausgabe.Text = "Whoops, ERROR.";
+                }
+            }
+        }
     }
 }

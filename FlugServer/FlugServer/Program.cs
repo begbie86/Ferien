@@ -14,6 +14,14 @@ namespace FlugServer
         string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt);
     }
 
+    [ServiceContract]
+
+    public interface IFlugbuchung
+    {
+        [OperationContract]
+        bool bookFlug(DateTime tDateTime, string tStartStadt, string tZielstadt, double tPreis, string tFluggesellschaft);
+    }
+
     class Flug:IFlug
     {
         public string getFlug(DateTime tDatetime, string tStartStadt, string tZielStadt)
@@ -21,6 +29,16 @@ namespace FlugServer
             Model.Db db = Model.Db.Instance();
 
             return db.SearchFlight(tDatetime, tStartStadt, tZielStadt);
+        }
+    }
+
+    class FlugBuchung : IFlugbuchung
+    {
+        public bool bookFlug(DateTime tDateTime, string tStartStadt, string tZielstadt, double tPreis, string tFluggesellschaft)
+        {
+            Model.Db db = Model.Db.Instance();
+
+            return db.bookFlight(tDateTime,tStartStadt,tZielstadt, tPreis,tFluggesellschaft);
         }
     }
 
