@@ -10,7 +10,7 @@ namespace FlugServer.Model
     {
         ICollection<Model.FlugItem> Flights;
         ICollection<Model.FlugBuchung> Buchungen;
-
+        // Test
 
         private static Db instance = null;
         protected Db()
