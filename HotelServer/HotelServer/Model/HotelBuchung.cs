@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HotelServer.Model
+{
+    class HotelBuchung:HotelItem
+    {
+        public Id Kundenkennung { get; set; }
+    }
+}

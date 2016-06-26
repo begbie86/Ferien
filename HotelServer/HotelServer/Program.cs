@@ -18,6 +18,13 @@ namespace HotelServer
         string getHotel(DateTime tDate, string tDestination);
     }
 
+    [ServiceContract]
+    public interface IHotelBuchung
+    {
+        [OperationContract]
+        bool bookHotel(DateTime tDate, string tHotelName, string tDestination, double tPreis);
+    }
+
     class Hotel:IHotel
     {
         public string getHotel(DateTime tDate, string tDestination)
@@ -25,6 +32,15 @@ namespace HotelServer
             Model.Db db = Model.Db.Instance();
 
             return db.SearchHotels(tDate, tDestination);
+        }
+    }
+
+    class HotelBuchung:IHotelBuchung
+    {
+        public bool bookHotel(DateTime tDate, string tHotelName, string tDestination, double tPreis)
+        {
+            Model.Db db = Model.Db.Instance();
+            return db.bookHotel(tDate, tDestination, tHotelName, tPreis);
         }
     }
 
@@ -36,6 +52,9 @@ namespace HotelServer
 
             var ServiceHostHotels = new ServiceHost(typeof(Hotel));
             ServiceHostHotels.Open();
+
+            var ServiceHostHotelBuchung = new ServiceHost(typeof(HotelBuchung));
+            ServiceHostHotelBuchung.Open();
 
             Console.WriteLine("HotelService Running...");
             Console.ReadLine();
