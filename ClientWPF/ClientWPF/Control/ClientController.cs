@@ -33,6 +33,13 @@ namespace ClientWPF.Control
         bool bookFlug(DateTime tDateTime, string tStartStadt, string tZielstadt, double tPreis, string tFluggesellschaft);
     }
 
+    [ServiceContract]
+    public interface IHotelBuchung
+    {
+        [OperationContract]
+        bool bookHotel(DateTime tDate, string tHotelName, string tDestination, double tPreis);
+    }
+
 
 
     class ClientController
@@ -40,6 +47,7 @@ namespace ClientWPF.Control
         DynamicEndpoint dynamicFlugEndpoint;
         DynamicEndpoint dynamicHotelEndpoint;
         DynamicEndpoint dynamicFlugBuchungEndpoint;
+        DynamicEndpoint dynamicHotelBuchungEndpoint;
 
 
 
@@ -48,6 +56,7 @@ namespace ClientWPF.Control
             dynamicFlugEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(IFlug)), new WSHttpBinding(SecurityMode.None));
             dynamicHotelEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(IHotel)), new WSHttpBinding(SecurityMode.None));
             dynamicFlugBuchungEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(IFlugbuchung)), new WSHttpBinding(SecurityMode.None));
+            dynamicHotelBuchungEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(IHotelBuchung)), new WSHttpBinding(SecurityMode.None));
         }
 
 
@@ -70,6 +79,13 @@ namespace ClientWPF.Control
             var proxyFlugBuchung = new ChannelFactory<IFlugbuchung>(dynamicFlugBuchungEndpoint).CreateChannel();
 
             return proxyFlugBuchung.bookFlug(tDateTime, tStartStadt, tZielstadt, tPreis, tFluggesellschaft);
+        }
+
+        public bool HotelBuchung(DateTime tDate, string tHotelName, string tDestination, double tPreis)
+        {
+            var proxyHotelBuchung = new ChannelFactory<IHotelBuchung>(dynamicHotelBuchungEndpoint).CreateChannel();
+
+            return proxyHotelBuchung.bookHotel(tDate, tHotelName, tDestination, tPreis);
         }
     }
 }
