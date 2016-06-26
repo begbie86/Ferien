@@ -22,7 +22,9 @@ namespace HotelServer
     {
         public string getHotel(DateTime tDate, string tDestination)
         {
-            return "Sheraton;650";
+            Model.Db db = Model.Db.Instance();
+
+            return db.SearchHotels(tDate, tDestination);
         }
     }
 
@@ -30,6 +32,8 @@ namespace HotelServer
     {
         static void Main(string[] args)
         {
+            Model.Db db = Model.Db.Instance();
+
             var ServiceHostHotels = new ServiceHost(typeof(Hotel));
             ServiceHostHotels.Open();
 
