@@ -8,6 +8,6 @@ namespace HotelServer.Model
 {
     class HotelBuchung:HotelItem
     {
-        public Id Kundenkennung { get; set; }
+        public int Kundenkennung { get; set; }
     }
 }
