@@ -51,6 +51,9 @@ namespace FlugServer
             var ServiceFlugAbfragen = new ServiceHost(typeof(Flug));
             ServiceFlugAbfragen.Open();
 
+            var ServiceFlugBuchungen = new ServiceHost(typeof(FlugBuchung));
+            ServiceFlugBuchungen.Open();
+
             Console.WriteLine("FlugService running.");
             Console.ReadLine();
         }

@@ -126,5 +126,27 @@ namespace ClientWPF
                 }
             }
         }
+
+        private void button_HotelBuchung_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tb_Hotel.Text) || string.IsNullOrWhiteSpace(tb_Hotelpreis.Text))
+            {
+                MessageBox.Show("Zuerst suchen.");
+            }
+
+            else
+            {
+                Control.ClientController CC = new Control.ClientController();
+                if (CC.HotelBuchung(dp_Date.SelectedDate.Value, tb_Hotel.Text, tb_Nach.Text, double.Parse(tb_Hotelpreis.Text)))
+                {
+                    tb_Ausgabe.Text = "Danke. Ihr Hotel ist gebucht.";
+                }
+
+                else
+                {
+                    tb_Ausgabe.Text = "Whoops, ERROR.";
+                }
+            }
+        }
     }
 }
